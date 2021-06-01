@@ -30,7 +30,7 @@ public class DirectExchangeConsumer {
                     (consumerTag, message) -> {
                         String messageBody = new String(message.getBody(), Charset.defaultCharset());
 
-                        // Log success
+                        // Log received message
                         System.out.println("Message consumed successfully");
                         System.out.println("Queue: " + DirectExchangeConfig.QUEUE_NAME);
                         System.out.println("Exchange: " + message.getEnvelope().getExchange());
